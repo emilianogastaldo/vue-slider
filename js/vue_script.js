@@ -7,7 +7,7 @@ const app = createApp({
     name: 'Vue Carousel',
     data() {
         return {
-
+            pictures
         }
     },
 
