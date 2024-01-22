@@ -13,18 +13,24 @@ const app = createApp({
         }
     },
     computed: {
-
+        getLastPosition() {
+            return this.pictures.length - 1;
+        },
+        isFirstIndex() {
+            return this.currentIndex === 0;
+        },
+        isLastIndex() {
+            return this.currentIndex === this.getLastPosition;
+        }
     },
     methods: {
         goToPrev() {
-            const lastPic = this.pictures.length - 1;
-            if (this.currentIndex === 0) this.currentIndex = lastPic
-            else this.currentIndex--
+            if (this.isFirstIndex) this.currentIndex = getLastPosition;
+            else this.currentIndex--;
         },
         goToNext() {
-            const lastPic = this.pictures.length - 1;
-            if (this.currentIndex === lastPic) this.currentIndex = 0
-            else this.currentIndex++
+            if (this.isLastIndex) this.currentIndex = 0;
+            else this.currentIndex++;
         }
     }
 });
