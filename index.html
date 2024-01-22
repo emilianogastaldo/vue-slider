@@ -38,7 +38,8 @@
 
         <!-- Gallery -->
         <div class="gallery">
-          <figure v-for="(picture,i) in pictures" v-show="currentIndex === i" @mouseenter="stopAutoplay">
+          <figure v-for="(picture,i) in pictures" v-show="currentIndex === i" @mouseenter="stopAutoplay"
+            @mouseleave="startAutoplay">
             <figcaption>
               <h2>{{picture.name}}</h2>
               <h3>{{picture.description}}</h3>
