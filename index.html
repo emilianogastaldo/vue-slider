@@ -54,7 +54,7 @@
       <!-- Thumbnails -->
       <div id="thumbnails">
         <img v-for="(picture,i) in pictures" :src=`img/${picture.image}` :alt="picture.name"
-          :class="{active: i === currentIndex}">
+          :class="{active: i === currentIndex}" @click="currentIndex = i">
       </div>
 
       <!-- <div class="autoplay-controls">
