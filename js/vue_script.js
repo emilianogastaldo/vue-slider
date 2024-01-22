@@ -7,10 +7,10 @@ const app = createApp({
     name: 'Vue Carousel',
     data() {
         return {
-            pictures
+            pictures,
+            prova: 'prova'
         }
-    },
-
+    }
 });
 // monto l'app nel DOM 
 app.mount('#root');

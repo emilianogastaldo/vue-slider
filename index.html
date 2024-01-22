@@ -40,10 +40,10 @@
         <div class="gallery">
           <figure class="active">
             <figcaption>
-              <h2>Svezia</h2>
-              <h3>Scandinavia's blend of nature and innovation.</h3>
+              <h2>{{pictures[0].name}}</h2>
+              <h3>{{pictures[0].description}}</h3>
             </figcaption>
-            <img src="img/01.jpg" alt="Svezia">
+            <img :src=`img/${pictures[0].image}` :alt="pictures[0].name">
           </figure>
         </div>
 
