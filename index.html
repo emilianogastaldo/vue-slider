@@ -38,12 +38,12 @@
 
         <!-- Gallery -->
         <div class="gallery">
-          <figure v-for="(picture,i) in pictures">
+          <figure v-for="(picture,i) in pictures" v-show="currentIndex === i">
             <figcaption>
               <h2>{{picture.name}}</h2>
               <h3>{{picture.description}}</h3>
             </figcaption>
-            <img :src=`img/${picture.image}` :alt="picture.name">
+            <img :src="`img/${picture.image}`" :alt="picture.name">
           </figure>
         </div>
 
@@ -54,7 +54,7 @@
       <!-- Thumbnails -->
       <div id="thumbnails">
         <img v-for="(picture,i) in pictures" :src=`img/${picture.image}` :alt="picture.name"
-          :class="i === currentIndex ? 'active' : ''">
+          :class="{active: i === currentIndex}">
       </div>
 
       <!-- <div class="autoplay-controls">
