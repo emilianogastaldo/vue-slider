@@ -16,6 +16,11 @@ const app = createApp({
 
     },
     methods: {
+        goToPrev() {
+            const lastPic = this.pictures.length - 1;
+            if (this.currentIndex === 0) this.currentIndex = lastPic
+            else this.currentIndex--
+        },
         goToNext() {
             const lastPic = this.pictures.length - 1;
             if (this.currentIndex === lastPic) this.currentIndex = 0
