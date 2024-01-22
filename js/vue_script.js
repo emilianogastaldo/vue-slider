@@ -58,5 +58,5 @@ const app = createApp({
         this.startAutoplay();
     }
 });
-// monto l'app nel DOM 
+// Monto l'app nel DOM 
 app.mount('#root');
