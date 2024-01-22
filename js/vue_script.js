@@ -46,13 +46,16 @@ const app = createApp({
         },
         stopAutoplay() {
             clearInterval(this.autoPlay);
+        },
+        startAutoplay() {
+            this.autoPlay = setInterval(() => {
+                this.setCurrentIndex('next');
+            }, 1000);
         }
 
     },
     mounted() {
-        this.autoPlay = setInterval(() => {
-            this.setCurrentIndex('next');
-        }, 1000)
+        this.startAutoplay();
     }
 });
 // monto l'app nel DOM 
