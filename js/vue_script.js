@@ -9,7 +9,8 @@ const app = createApp({
         return {
             pictures,
             prova: 'prova',
-            currentIndex: 0
+            currentIndex: 0,
+            autoPlay: null
         }
     },
     computed: {
@@ -46,7 +47,7 @@ const app = createApp({
 
     },
     mounted() {
-        setInterval(() => {
+        this.autoPlay = setInterval(() => {
             this.setCurrentIndex('next')
         }, 1000)
     }
