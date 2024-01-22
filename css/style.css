@@ -25,11 +25,12 @@
 	height: 100%;
 	width: 100%;
 	position: relative;
-	display: none;
+	/* display: none; */
 }
-.gallery figure.active {
+
+/* .gallery figure.active {
 	display: block;
-}
+} */
 
 .gallery img {
 	height: 100%;
@@ -93,6 +94,7 @@ figcaption h3 {
 	cursor: pointer;
 	transition: transform 0.5s;
 }
+
 #thumbnails img:hover {
 	transform: translateY(-10px);
 	filter: grayscale(0.5);
