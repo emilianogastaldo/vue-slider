@@ -40,10 +40,10 @@
         <div class="gallery">
           <figure v-for="(picture,i) in pictures">
             <figcaption>
-              <h2>{{pictures[i].name}}</h2>
-              <h3>{{pictures[i].description}}</h3>
+              <h2>{{picture.name}}</h2>
+              <h3>{{picture.description}}</h3>
             </figcaption>
-            <img :src=`img/${pictures[i].image}` :alt="pictures[i].name">
+            <img :src=`img/${picture.image}` :alt="picture.name">
           </figure>
         </div>
 
@@ -53,7 +53,7 @@
 
       <!-- Thumbnails -->
       <div id="thumbnails">
-        <img v-for="(picture,i) in pictures" :src=`img/${pictures[i].image}` :alt="pictures[i].name" class="active">
+        <img v-for="picture in pictures" :src=`img/${picture.image}` :alt="picture.name" class="active">
       </div>
 
       <!-- <div class="autoplay-controls">
