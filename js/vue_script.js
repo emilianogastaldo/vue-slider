@@ -31,7 +31,19 @@ const app = createApp({
         goToNext() {
             if (this.isLastIndex) this.currentIndex = 0;
             else this.currentIndex++;
+        },
+        setCurrentIndex(target) {
+            if (target === 'prev') {
+                if (this.isFirstIndex) this.currentIndex = getLastPosition;
+                else this.currentIndex--;
+            } else if (target === 'next') {
+                if (this.isLastIndex) this.currentIndex = 0;
+                else this.currentIndex++;
+            } else {
+                this.currentIndex = target;
+            }
         }
+
     }
 });
 // monto l'app nel DOM 
