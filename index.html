@@ -38,12 +38,12 @@
 
         <!-- Gallery -->
         <div class="gallery">
-          <figure class="active">
+          <figure v-for="(picture,i) in pictures">
             <figcaption>
-              <h2>{{pictures[0].name}}</h2>
-              <h3>{{pictures[0].description}}</h3>
+              <h2>{{pictures[i].name}}</h2>
+              <h3>{{pictures[i].description}}</h3>
             </figcaption>
-            <img :src=`img/${pictures[0].image}` :alt="pictures[0].name">
+            <img :src=`img/${pictures[i].image}` :alt="pictures[i].name">
           </figure>
         </div>
 
