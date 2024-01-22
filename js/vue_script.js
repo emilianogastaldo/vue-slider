@@ -8,7 +8,18 @@ const app = createApp({
     data() {
         return {
             pictures,
-            prova: 'prova'
+            prova: 'prova',
+            currentIndex: 0
+        }
+    },
+    computed: {
+
+    },
+    methods: {
+        goToNext() {
+            const lastPic = this.pictures.length - 1;
+            if (this.currentIndex === lastPic) this.currentIndex = 0
+            else this.currentIndex++
         }
     }
 });
