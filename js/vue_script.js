@@ -44,6 +44,11 @@ const app = createApp({
             }
         }
 
+    },
+    mounted() {
+        setInterval(() => {
+            this.setCurrentIndex('next')
+        }, 1000)
     }
 });
 // monto l'app nel DOM 
