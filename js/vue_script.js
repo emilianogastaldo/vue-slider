@@ -43,12 +43,15 @@ const app = createApp({
             } else {
                 this.currentIndex = target;
             }
+        },
+        stopAutoplay() {
+            clearInterval(this.autoPlay);
         }
 
     },
     mounted() {
         this.autoPlay = setInterval(() => {
-            this.setCurrentIndex('next')
+            this.setCurrentIndex('next');
         }, 1000)
     }
 });
